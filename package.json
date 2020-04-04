@@ -1,0 +1,14 @@
+{
+  "name": "first",
+  "version": "1.0.0",
+  "description": "abc",
+  "scripts": {
+    "start": "node apps.js"
+  },
+  "author": "shivan",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "3.0.2",
+    "express": "4.17.1"
+  }
+}
