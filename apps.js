@@ -51,6 +51,7 @@ app.post('/submit',function (req,res)
   {
     list = [];
     list = new Array(questions.length);
+    current_qs = 0;
     res.redirect('/quiz');
   }
 )
