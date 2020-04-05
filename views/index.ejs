@@ -7,6 +7,14 @@
 
   </head>
   <body>
-    <p>test the hosting part </p>
+    <form action="/login" method='post'>
+      <label>User:</label><br>
+      <input type="text" name="user"><br>
+      <label>Password:</label><br>
+      <input type="password" name="pass">
+      <br>
+      <input type="submit" value="Submit">
+    </form>
+    <p><%= ret %></p>
   </body>
 </html>

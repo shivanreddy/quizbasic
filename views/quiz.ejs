@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+
+  </head>
+  <body>
+    <form action="/quiz" method='post'>
+      <label name="question" > <%= qs%> </label>
+      <br>
+      <input type="radio" name="option" value="option1">
+      <label for="option1"><%= optionone %></label><br>
+      <input type="radio" name="option" value="option2">
+      <label for="option2"><%= optiontwo %></label><br>
+      <input type="radio" name="option" value="option3">
+      <label for="option3"><%= optionthree %></label><br>
+      <input type="radio"name="option" value="option4">
+      <label for="option4"><%= optionfour %></label><br>
+      <br>
+        <input type="submit" name="button" value="Previous">
+        <input type="submit" name="button" value="Next">
+      <br>
+      <input type="submit" name="button" value="Submit">
+    </form>
+
+    <% if (checked) { %>
+     <script>
+        var clientGameState = <%- JSON.stringify(checked) %>;
+        var radios = document.getElementsByName('option');
+        for (var i = 0, length = radios.length; i < length; i++) {
+
+           if (radios[i].value === clientGameState) {
+              radios[i].checked = true;
+           }
+        }
+     </script>
+     <% } %>
+  </body>
+</html>
